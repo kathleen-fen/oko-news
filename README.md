@@ -7,7 +7,7 @@ App to display news feed
 CLone repository to your project folder. 
 
 ```js
-git clone https://github.com/kathleen-fen/oko-news.git
+$ git clone https://github.com/kathleen-fen/oko-news.git
 ```
 
 
@@ -19,6 +19,8 @@ $ npm install
 ```
 
 ### Run
+
+Run json server and run project.
 
 ```js
 $ npm run jsonsrv
