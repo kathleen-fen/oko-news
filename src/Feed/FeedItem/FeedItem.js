@@ -5,7 +5,7 @@ function FeedItem(props) {
   return (
     <div className="card col-md-4">
       <img src={item.thumb} className="card-img-top" alt="" />
-      <div className="card-footer">
+      <div className="card-header">
         <small>{item.date}</small>
       </div>
       <div className="card-body">
