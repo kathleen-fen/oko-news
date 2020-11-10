@@ -3,6 +3,8 @@ import axios from "axios";
 
 import FeedItem from "./FeedItem/FeedItem";
 import Loader from "./UI/Loader/Loader";
+import Error from '../Error/Error';
+
 import "./Feed.scss";
 
 class Feed extends React.Component {
@@ -71,6 +73,8 @@ class Feed extends React.Component {
         loading: false,
         isFeedArrayFull: true
       })
+      console.log(this.state)
+
     });
   }
 
@@ -96,6 +100,7 @@ class Feed extends React.Component {
             ) : (
               ""
             )}
+            {this.state.error ? (<Error />): ""}
           </div>
         </div>
       </div>
