@@ -3,9 +3,7 @@ import axios from "axios";
 
 import FeedItem from "./FeedItem/FeedItem";
 import Loader from "./UI/Loader/Loader";
-import Error from '../Error/Error';
-
-import "./Feed.scss";
+import Error from "../Error/Error";
 
 class Feed extends React.Component {
   state = {
@@ -14,7 +12,7 @@ class Feed extends React.Component {
     pageLimit: 9,
     curPage: 0,
     isFeedArrayFull: false,
-    error: false
+    error: false,
   };
 
   componentDidMount() {
@@ -32,7 +30,7 @@ class Feed extends React.Component {
         this.getFeed();
       }
     });
-    
+
     this.getFeed();
   }
   // server request and state change
@@ -66,16 +64,15 @@ class Feed extends React.Component {
           curPage: this.state.curPage + 1,
         });
       })
-    .catch((e) => {
-      this.setState({
-        ...this.state,
-        error: true,
-        loading: false,
-        isFeedArrayFull: true
-      })
-      console.log(this.state)
-
-    });
+      .catch((e) => {
+        this.setState({
+          ...this.state,
+          error: true,
+          loading: false,
+          isFeedArrayFull: true,
+        });
+        console.log(this.state);
+      });
   }
 
   render() {
@@ -100,7 +97,7 @@ class Feed extends React.Component {
             ) : (
               ""
             )}
-            {this.state.error ? (<Error />): ""}
+            {this.state.error ? <Error /> : ""}
           </div>
         </div>
       </div>
