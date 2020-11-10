@@ -4,7 +4,7 @@ App to display news feed
 
 ### Install
 
-CLone repository to your project folder. 
+Clone repository to your project folder. 
 
 ```js
 $ git clone https://github.com/kathleen-fen/oko-news.git
