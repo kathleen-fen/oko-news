@@ -33,6 +33,7 @@ class Feed extends React.Component {
 
     this.getFeed();
   }
+
   // server request and state change
   getFeed() {
     if (this.state.isFeedArrayFull) return;
@@ -71,7 +72,6 @@ class Feed extends React.Component {
           loading: false,
           isFeedArrayFull: true,
         });
-        console.log(this.state);
       });
   }
 
